@@ -1,0 +1,37 @@
+{
+    "last_id": 3,
+    "students": [
+        {
+            "id": 1,
+            "nome": "Mario",
+            "cognome": "Rossi",
+            "voti": [
+                6,
+                7,
+                8
+            ],
+            "media": 7.0
+        },
+        {
+            "id": 2,
+            "nome": "Lucia",
+            "cognome": "Bianchi",
+            "voti": [
+                6,
+                6
+            ],
+            "media": 6.0
+        },
+        {
+            "id": 3,
+            "nome": "Massimo",
+            "cognome": "Boldi",
+            "voti": [
+                23,
+                24,
+                25
+            ],
+            "media": 24.0
+        }
+    ]
+}
