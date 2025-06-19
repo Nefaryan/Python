@@ -1,0 +1,67 @@
+
+=== Round 1: Maghetto vs Arcieretto ===
+Maghetto tira il dado: 19
+Arcieretto tira il dado: 14
+Maghetto inizia per primo!
+
+Turno 1:
+Maghetto attacca.
+Maghetto attacca Arcieretto (danno normale) infliggendo 5 danni.
+Maghetto effettua un secondo attacco (doppio danno) infliggendo 20 danni.
+Maghetto (Arciere) - Salute: 100 [████████████████████]
+Arcieretto (Arciere) - Salute: 75 [███████████████-----]
+
+Turno 2:
+Arcieretto attacca.
+Arcieretto attacca Maghetto (doppio danno) infliggendo 20 danni.
+Arcieretto effettua un secondo attacco (mezzo danno) infliggendo 0 danni.
+Maghetto (Arciere) - Salute: 80 [████████████████----]
+Arcieretto (Arciere) - Salute: 75 [███████████████-----]
+
+Turno 3:
+Maghetto attacca.
+Maghetto attacca Arcieretto (doppio danno) infliggendo 20 danni.
+Maghetto effettua un secondo attacco (doppio danno) infliggendo 20 danni.
+Maghetto esegue un attacco bonus! (doppio danno) infliggendo 20 danni.
+Maghetto (Arciere) - Salute: 80 [████████████████----]
+Arcieretto (Arciere) - Salute: 15 [███-----------------]
+
+Turno 4:
+Arcieretto attacca.
+Arcieretto attacca Maghetto (doppio danno) infliggendo 20 danni.
+Maghetto (Arciere) - Salute: 60 [████████████--------]
+Arcieretto (Arciere) - Salute: 15 [███-----------------]
+
+Turno 5:
+Maghetto attacca.
+Maghetto attacca Arcieretto (danno normale) infliggendo 5 danni.
+Maghetto (Arciere) - Salute: 60 [████████████--------]
+Arcieretto (Arciere) - Salute: 10 [██------------------]
+
+Turno 6:
+Arcieretto attacca.
+Arcieretto attacca Maghetto (danno normale) infliggendo 5 danni.
+Maghetto (Arciere) - Salute: 55 [███████████---------]
+Arcieretto (Arciere) - Salute: 10 [██------------------]
+
+Turno 7:
+Maghetto attacca.
+Maghetto attacca Arcieretto (danno normale) infliggendo 5 danni.
+Maghetto (Arciere) - Salute: 55 [███████████---------]
+Arcieretto (Arciere) - Salute: 5 [█-------------------]
+
+Turno 8:
+Arcieretto attacca.
+Arcieretto attacca Maghetto (danno normale) infliggendo 5 danni.
+Arcieretto effettua un secondo attacco (doppio danno) infliggendo 20 danni.
+Maghetto (Arciere) - Salute: 30 [██████--------------]
+Arcieretto (Arciere) - Salute: 5 [█-------------------]
+
+Turno 9:
+Maghetto attacca.
+Maghetto attacca Arcieretto (danno normale) infliggendo 5 danni.
+Maghetto (Arciere) - Salute: 30 [██████--------------]
+Arcieretto (Arciere) - Salute: 0 [--------------------]
+
+Maghetto vince il duello!
+
