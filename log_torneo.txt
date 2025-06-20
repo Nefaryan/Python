@@ -1,67 +1,133 @@
 
-=== Round 1: Maghetto vs Arcieretto ===
-Maghetto tira il dado: 19
-Arcieretto tira il dado: 14
-Maghetto inizia per primo!
+=== Round 1: Cavaliere vs Mago ===
+Cavaliere tira il dado: 14
+Mago tira il dado: 9
+Cavaliere inizia per primo!
 
 Turno 1:
-Maghetto attacca.
-Maghetto attacca Arcieretto (danno normale) infliggendo 5 danni.
-Maghetto effettua un secondo attacco (doppio danno) infliggendo 20 danni.
-Maghetto (Arciere) - Salute: 100 [████████████████████]
-Arcieretto (Arciere) - Salute: 75 [███████████████-----]
+Cavaliere attacca.
+Cavaliere colpisce Mago infliggendo 10 danni.
+Cavaliere (Cavaliere) - Salute: 100 [████████████████████]
+Mago (Mago) - Salute: 90 [██████████████████--]
 
 Turno 2:
-Arcieretto attacca.
-Arcieretto attacca Maghetto (doppio danno) infliggendo 20 danni.
-Arcieretto effettua un secondo attacco (mezzo danno) infliggendo 0 danni.
-Maghetto (Arciere) - Salute: 80 [████████████████----]
-Arcieretto (Arciere) - Salute: 75 [███████████████-----]
+Mago attacca.
+Mago scaglia una 'Palla di Fuoco' su Cavaliere, infliggendo 22 danni!
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 90 [██████████████████--]
 
 Turno 3:
-Maghetto attacca.
-Maghetto attacca Arcieretto (doppio danno) infliggendo 20 danni.
-Maghetto effettua un secondo attacco (doppio danno) infliggendo 20 danni.
-Maghetto esegue un attacco bonus! (doppio danno) infliggendo 20 danni.
-Maghetto (Arciere) - Salute: 80 [████████████████----]
-Arcieretto (Arciere) - Salute: 15 [███-----------------]
+Cavaliere attacca.
+Cavaliere colpisce Mago infliggendo 10 danni.
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 80 [████████████████----]
 
 Turno 4:
-Arcieretto attacca.
-Arcieretto attacca Maghetto (doppio danno) infliggendo 20 danni.
-Maghetto (Arciere) - Salute: 60 [████████████--------]
-Arcieretto (Arciere) - Salute: 15 [███-----------------]
+Mago attacca.
+Magikarp usa Splash:
+Non succede nulla
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 80 [████████████████----]
 
 Turno 5:
-Maghetto attacca.
-Maghetto attacca Arcieretto (danno normale) infliggendo 5 danni.
-Maghetto (Arciere) - Salute: 60 [████████████--------]
-Arcieretto (Arciere) - Salute: 10 [██------------------]
+Cavaliere attacca.
+Cavaliere colpisce Mago infliggendo 10 danni.
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 70 [██████████████------]
 
 Turno 6:
-Arcieretto attacca.
-Arcieretto attacca Maghetto (danno normale) infliggendo 5 danni.
-Maghetto (Arciere) - Salute: 55 [███████████---------]
-Arcieretto (Arciere) - Salute: 10 [██------------------]
+Mago attacca.
+Magikarp usa Splash:
+Non succede nulla
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 70 [██████████████------]
 
 Turno 7:
-Maghetto attacca.
-Maghetto attacca Arcieretto (danno normale) infliggendo 5 danni.
-Maghetto (Arciere) - Salute: 55 [███████████---------]
-Arcieretto (Arciere) - Salute: 5 [█-------------------]
+Cavaliere attacca.
+Cavaliere colpisce Mago infliggendo 10 danni.
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 60 [████████████--------]
 
 Turno 8:
-Arcieretto attacca.
-Arcieretto attacca Maghetto (danno normale) infliggendo 5 danni.
-Arcieretto effettua un secondo attacco (doppio danno) infliggendo 20 danni.
-Maghetto (Arciere) - Salute: 30 [██████--------------]
-Arcieretto (Arciere) - Salute: 5 [█-------------------]
+Mago attacca.
+Mago lancia un fulmine n.1 infliggendo 0 danni!
+Mago lancia un fulmine n.2 infliggendo 0 danni!
+Mago lancia un fulmine n.3 infliggendo 0 danni!
+Totale danni inflitti da 'Catena di fulmini': 0
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 60 [████████████--------]
 
 Turno 9:
-Maghetto attacca.
-Maghetto attacca Arcieretto (danno normale) infliggendo 5 danni.
-Maghetto (Arciere) - Salute: 30 [██████--------------]
-Arcieretto (Arciere) - Salute: 0 [--------------------]
+Cavaliere attacca.
+Cavaliere colpisce Mago infliggendo 10 danni.
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 50 [██████████----------]
 
-Maghetto vince il duello!
+Turno 10:
+Mago attacca.
+Mago lancia un fulmine n.1 infliggendo 0 danni!
+Mago lancia un fulmine n.2 infliggendo 0 danni!
+Mago lancia un fulmine n.3 infliggendo 0 danni!
+Totale danni inflitti da 'Catena di fulmini': 0
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 50 [██████████----------]
+
+Turno 11:
+Cavaliere attacca.
+Colpo potente di Cavaliere!
+Cavaliere colpisce Mago infliggendo 25 danni.
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 25 [█████---------------]
+
+Turno 12:
+Mago attacca.
+Mago lancia 'Blocca'! Cavaliere tira il dado salvezza: 19
+Cavaliere resiste all'incantesimo!
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 25 [█████---------------]
+
+Turno 13:
+Cavaliere attacca.
+Cavaliere colpisce Mago infliggendo 10 danni.
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 15 [███-----------------]
+
+Turno 14:
+Mago attacca.
+Mago lancia 'Scudo'! Il prossimo attacco subito sarà dimezzato.
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 15 [███-----------------]
+
+Turno 15:
+Cavaliere attacca.
+Cavaliere colpisce Mago infliggendo 2 danni.
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 13 [██------------------]
+
+Turno 16:
+Mago attacca.
+Mago scaglia una 'Palla di Fuoco' su Cavaliere, infliggendo 0 danni!
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 13 [██------------------]
+
+Turno 17:
+Cavaliere attacca.
+Cavaliere colpisce Mago infliggendo 10 danni.
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 3 [--------------------]
+
+Turno 18:
+Mago attacca.
+Mago lancia 'Blocca'! Cavaliere tira il dado salvezza: 18
+Cavaliere resiste all'incantesimo!
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 3 [--------------------]
+
+Turno 19:
+Cavaliere attacca.
+Cavaliere colpisce Mago infliggendo 10 danni.
+Cavaliere (Cavaliere) - Salute: 78 [███████████████-----]
+Mago (Mago) - Salute: 0 [--------------------]
+
+Cavaliere vince il duello!
 
