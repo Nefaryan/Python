@@ -7,7 +7,9 @@ class Soldato(ABC):
         self.__attacco = attacco
         self.__difesa = difesa
         self.__salute = salute
+        self.max_salute = salute
         self.__costo = costo
+        self.__abilità_usata = False
 
     def get_nome(self):
         return self.__nome
@@ -32,20 +34,30 @@ class Soldato(ABC):
         self.__salute -= danno_effettivo
         return danno_effettivo
 
-    @abstractmethod
-    def attacca(self, target):
-        pass
-
     def stato(self):
         print(f"{self.__nome} - Salute: {self.__salute}")
 
     def cura(self, punti):
-        self.__salute = min(100, self.__salute + punti)
+        self.__salute = min(self.max_salute, self.__salute + punti)
 
+    def abilità_usata(self):
+        return self.__abilità_usata
+
+    def segna_abilità_usata(self):
+        self.__abilità_usata = True
+
+    @abstractmethod
+    def attacca(self, target):
+        pass
+
+    @abstractmethod
+    def usa_abilità_speciale(self, alleati, nemici):
+        pass
 
 class Cavaliere(Soldato):
     def __init__(self, nome):
         super().__init__(nome, attacco=30, difesa=20, salute=100, costo=200)
+        self._assorbimento_attivo = False
 
     def attacca(self, avversario):
         danno = self.get_attacco()
@@ -56,6 +68,18 @@ class Cavaliere(Soldato):
         danno_subito = avversario.difenditi(danno)
         print(f"{avversario.get_nome()} subisce {danno_subito} danni!")
 
+    def difenditi(self, danno):
+        if self._assorbimento_attivo:
+            danno = danno // 2
+            print(f"{self.get_nome()} riduce il danno grazie allo scudo sacro!")
+            self._assorbimento_attivo = False
+        return super().difenditi(danno)
+
+    def usa_abilità_speciale(self, alleati, nemici):
+        if not self.abilità_usata():
+            self._assorbimento_attivo = True
+            self.segna_abilità_usata()
+            print(f"{self.get_nome()} attiva Scudo Sacro!")
 
 class Arciere(Soldato):
     def __init__(self, nome):
@@ -67,6 +91,15 @@ class Arciere(Soldato):
         danno_subito = avversario.difenditi(danno)
         print(f"{avversario.get_nome()} subisce {danno_subito} danni!")
 
+    def usa_abilità_speciale(self, alleati, nemici):
+        if not self.abilità_usata():
+            print(f"{self.get_nome()} usa Pioggia di Frecce!")
+            for n in nemici:
+                if n.è_vivo():
+                    danno = self.get_attacco() // 2
+                    n.difenditi(danno)
+                    print(f" - {n.get_nome()} subisce {danno} danni da frecce!")
+            self.segna_abilità_usata()
 
 class Mago(Soldato):
     def __init__(self, nome):
@@ -74,11 +107,15 @@ class Mago(Soldato):
 
     def attacca(self, avversario):
         energia = random.randint(10, 40)
-        danno = energia
-        print(f"{self.get_nome()} lancia un incantesimo su {avversario.get_nome()} con {danno} danni.")
-        danno_subito = avversario.difenditi(danno)
-        print(f"{avversario.get_nome()} subisce {danno_subito} danni!")
+        print(f"{self.get_nome()} lancia un incantesimo su {avversario.get_nome()} con {energia} danni.")
+        avversario.difenditi(energia)
 
+    def usa_abilità_speciale(self, alleati, nemici):
+        if not self.abilità_usata():
+            fantasma = SoldatoFantasma(f"Fantasma_{self.get_nome()}")
+            alleati.append(fantasma)
+            print(f"{self.get_nome()} evoca {fantasma.get_nome()}!")
+            self.segna_abilità_usata()
 
 class Guaritore(Soldato):
     def __init__(self, nome):
@@ -94,6 +131,31 @@ class Guaritore(Soldato):
         else:
             print(f"{self.get_nome()} non ha nessuno da curare.")
 
+    def usa_abilità_speciale(self, alleati, nemici):
+        if not self.abilità_usata():
+            caduti = [a for a in alleati if not a.è_vivo() and a != self]
+            if caduti:
+                target = caduti[0]
+                target.cura(target.max_salute // 2)
+                print(f"{self.get_nome()} rianima {target.get_nome()} con metà salute!")
+                self.segna_abilità_usata()
+            else:
+                print(f"{self.get_nome()} non trova alleati caduti.")
+
+class SoldatoFantasma(Soldato):
+    def __init__(self, nome):
+        super().__init__(nome, attacco=50, difesa=0, salute=1, costo=0)
+
+    def attacca(self, target):
+        print(f"{self.get_nome()} (Fantasma) attacca con 50 danni!")
+        target.difenditi(50)
+
+    def usa_abilità_speciale(self, alleati, nemici):
+        pass
+
+
+def ha_combattenti_vivi(esercito):
+     return any(not isinstance(s, Guaritore) and s.è_vivo() for s in esercito)
 
 def crea_soldato(tipo, nome):
     if tipo == "1":
@@ -177,28 +239,46 @@ def acquisto_automatico(budget):
 
 def scontro(esercito_giocatore, esercito_ia):
     print("\nInizia la battaglia!")
-    
+
+    if not ha_combattenti_vivi(esercito_giocatore) and not ha_combattenti_vivi(esercito_ia):
+        print("La battaglia termina in pareggio: solo guaritori rimasti su entrambi i lati.")
+        return
+    elif not ha_combattenti_vivi(esercito_giocatore):
+        print("La battaglia termina: il giocatore ha solo guaritori rimasti. Vittoria IA!")
+        return
+    elif not ha_combattenti_vivi(esercito_ia):
+        print("La battaglia termina: l'IA ha solo guaritori rimasti. Vittoria Giocatore!")
+        return
+
     for g in esercito_giocatore:
         if not esercito_ia:
             break
         bersaglio = random.choice(esercito_ia)
-        if isinstance(g, Arciere):
-            g.attacca(bersaglio)
-        elif isinstance(g, Guaritore):
-            g.attacca(esercito_giocatore)
+
+        if not g.abilità_usata() and random.random() < 0.3:
+            g.usa_abilità_speciale(esercito_giocatore, esercito_ia)
         else:
-            g.attacca(bersaglio)
+            if isinstance(g, Arciere):
+                g.attacca(bersaglio)
+            elif isinstance(g, Guaritore):
+                g.attacca(esercito_giocatore)
+            else:
+                g.attacca(bersaglio)
 
     for ia in esercito_ia:
         if not esercito_giocatore:
             break
         bersaglio = random.choice(esercito_giocatore)
-        if isinstance(ia, Arciere):
-            ia.attacca(bersaglio)
-        elif isinstance(ia, Guaritore):
-            ia.attacca(esercito_ia)
+
+        if not ia.abilità_usata() and random.random() < 0.3:
+            ia.usa_abilità_speciale(esercito_ia, esercito_giocatore)
         else:
-            ia.attacca(bersaglio)
+            if isinstance(ia, Arciere):
+                ia.attacca(bersaglio)
+            elif isinstance(ia, Guaritore):
+                ia.attacca(esercito_ia)
+            else:
+                ia.attacca(bersaglio)
 
     esercito_giocatore[:] = [s for s in esercito_giocatore if s.è_vivo()]
     esercito_ia[:] = [s for s in esercito_ia if s.è_vivo()]
