@@ -1,0 +1,56 @@
+import pandas as pd
+import numpy as np
+import random
+
+
+nomi = ['Luca', 'Giulia', 'Marco', 'Sara', 'Paolo', 'Anna', 'Giorgio', 'Elena', 'Marta', 'Francesco']
+città = ['Roma', 'Milano', 'Napoli', 'Torino', 'Bologna','Reggio Calabria','Salerno']
+
+np.random.seed(0) 
+dati = {
+    'Nome': random.choices(nomi, k=20),
+    'Età': np.random.randint(15, 90, size=20).astype(float),
+    'Città': random.choices(città, k=20),
+    'Salario': np.random.randint(10000, 400000, size=20).astype(float)
+}
+
+dati['Salario'][3] = np.nan
+dati['Età'][5] = np.nan
+df = pd.DataFrame(dati)
+df = pd.concat([df, df.iloc[[1]]]) # Diplicati
+
+# 2. Prime e ultime 5 righe
+print("Prime 5 righe:\n", df.head())
+print("\nUltime 5 righe:\n", df.tail())
+
+# 3. Tipi di dati
+print("\nTipi di dati:\n", df.dtypes)
+
+# 4. Statistiche descrittive
+print("\nStatistiche descrittive:\n", df.describe())
+
+# Mediana e deviazione standard separatamente
+print("\nMediana:\n", df.median(numeric_only=True))
+print("\nDeviazione standard:\n", df.std(numeric_only=True))
+
+# 5. Rimozione duplicati
+df = df.drop_duplicates()
+
+# 6. Gestione dei valori mancanti (con mediana)
+df['Età'] = df['Età'].fillna(df['Età'].median())
+df['Salario'] = df['Salario'].fillna(df['Salario'].median())
+
+# 7. Aggiunta colonna Categoria Età
+def classifica_eta(età):
+    if età <= 18:
+        return 'Giovane'
+    elif età <= 65:
+        return 'Adulto'
+    else:
+        return 'Senior'
+
+df['Categoria Età'] = df['Età'].apply(classifica_eta)
+
+# 8. Salvataggio su CSV
+df.to_csv('dati_puliti.csv')
+print("\nDataFrame pulito salvato in 'dati_puliti.csv'")
