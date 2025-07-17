@@ -1,0 +1,4 @@
+Numero Cliente,Nome,Cognome,Data di Nascita,Regione,Età,Minorenne,Eta>17,Eta>20
+1,Ciao,Ciao,2000-01-01,Regione,25,,X,X
+2,Ciao,Ciao,2020-01-01,Regione,5,X,,
+3,Ciao,ciao,2009-01-02,Residenza,16,X,,
